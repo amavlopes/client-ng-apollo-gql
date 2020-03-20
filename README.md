@@ -12,12 +12,11 @@ $ npm i
 ```
 
 ### Rodando a aplicação Angular
-No diretório `/client`, digite o comando abaixo:
+Digite o comando abaixo:
 ```sh
 $ ng serve
 ```
-Após digite `http://localhost:4200/graphql` na barra de navegação.
-Qualquer alteração no projeto, com o serviço rodando, causará o refresh da página automaticamente.
+Após digite `http://localhost:4200` na barra de navegação.
 
 ###  Criando componentes e recursos com angular-cli
 
