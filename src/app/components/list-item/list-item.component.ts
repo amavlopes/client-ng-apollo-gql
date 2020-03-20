@@ -15,7 +15,7 @@ const typeQueryGetAll = gql`
       riserSetNumber
       supplier
       section
-      function
+      func
       lifeLength
       reference
       pshh
@@ -32,7 +32,7 @@ const typeQueryGetByLimit = gql`
       riserSetNumber
       supplier
       section
-      function
+      func
       lifeLength
       reference
       pshh
@@ -47,8 +47,9 @@ const typeQueryGetByLimit = gql`
 })
 export class ListItemComponent implements OnInit, OnDestroy {
 
-  loading: boolean;
-  pipelifetimes: PipeLifetime[] = [];
+  loading: boolean
+  pipe: PipeLifetime
+  pipelifetimes: PipeLifetime[]
 
   private querySubscription: Subscription;
 
@@ -66,7 +67,7 @@ export class ListItemComponent implements OnInit, OnDestroy {
     .subscribe(result => {
       this.loading = result.loading;
       console.log('result', result)
-      //this.pipelifetimes = result.data.pipelifetimes;
+      this.pipelifetimes = result.data.getAll;
     });
   }
 

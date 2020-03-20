@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { PipeLifetime } from '../../types/types';
 
 @Component({
   selector: 'app-pipelifetime',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipeLifetimeComponent implements OnInit {
 
+  @Input() pipe: PipeLifetime
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

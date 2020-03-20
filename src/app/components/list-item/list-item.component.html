@@ -1,3 +1,9 @@
-<div *ngFor="pipe of pipelifetimes">
-    <app-pipelifetime></app-pipelifetime>
+<div class="row">
+    <header class="col-sm-12">
+        <h2>List of PipeLifetimes</h2>
+    </header>
+
+    <div class="col-sm-4" *ngFor="let pipe of pipelifetimes">   
+        <app-pipelifetime [pipe]="pipe"></app-pipelifetime>
+    </div>
 </div>
