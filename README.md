@@ -1,27 +1,66 @@
-# NgApolloGql
+# POC AngularIO, Apollo Client, API graphQL
+Desenvolvimento da prova de conceito, usando as stacks abaixo:
+*Frontend:* AngularIO, Bootstrap, Apollo Angular
+*Backend:* Node.js + Express + graphQL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+#### Baixando o projeto e instalando dependências
+Para clonar o projeto, vá para o diretório local desejado e use o comando abaixo, com a urL https ou SSH key:
+```sh
+$ git clone url-https|SSH
+```
+Para instalar as dependências necessárias, em ambos os diretórios `/client` e `server/`, use o comando abaixo:  
+```sh
+$ npm i
+```
+### Acessando o servidor da API graphQl
+No diretório `/server`, digite o comando abaixo:
+```sh
+$ node server
+```
+Após digite `http://localhost:4000/graphql` na barra de navegação.
+Aparecerá uma interface graphiQl, onde se poderá testar as queries e mutations declaradas.
 
-## Development server
+### Rodando a aplicação Angular
+No diretório `/client`, digite o comando abaixo:
+```sh
+$ ng serve
+```
+Após digite `http://localhost:4200/graphql` na barra de navegação.
+Qualquer alteração no projeto, com o serviço rodando, causará o refresh da página automaticamente.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#####  Criando componentes e recursos com angular-cli
 
-## Code scaffolding
+Para criar um novo componente:
+```sh
+$ ng g c pasta/nome-do-componente
+```
+Para criar um novo componente em um módulo específico:
+```sh
+$ ng g c pasta/nome-do-componente --module nome-do-módulo
+```
+Para criar demais recursos:
+```sh
+$ ng g directive|pipe|service|class|guard|interface|enum|module
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##### Rodando o build
+Os arquivos serão gerados em `/dist`, após digitar o comando abaixo:
+```sh
+$ ng build
+```
+Gerar build para ambiente de produção, use a flag `--prod`
+```sh
+$ ng build --prod
+```
 
-## Build
+##### Rodando testes unitários
+Para executar testes unitários via [Karma](https://karma-runner.github.io), digite o comando abaixo:
+```sh
+$ ng test
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##### Rodando testes end-to-end
+Para executar testes end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+$ ng e2e
+```
