@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PipeLifetimeComponent } from './components/pipelifetime/pipelifetime.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { ListItemComponent } from './components/list-item/list-item.component';
     ListItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
